@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
     {
         if(colisao.gameObject.tag == "espinho")
         {
-            print("Morreu");
+            print("Morreu again");
         }
     }
 }
