@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -33,7 +34,16 @@ public class Player : MonoBehaviour
     {
         if(colisao.gameObject.tag == "espinho")
         {
+            SceneManager.LoadScene("GameOver");
             print("Morreu again");
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "espinho")
+        {
+            SceneManager.LoadScene("GameOver");
         }
     }
 }
